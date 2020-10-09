@@ -24,4 +24,18 @@
     public,
     max-age=86400'''
 
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+	cache-control = '''
+    public,
+    max-age=86400'''
+
+[[headers]]
+  for = "/_next/data/*"
+  [headers.values]
+	cache-control = '''
+    public,
+    max-age=86400'''
+
 
