@@ -2,3 +2,26 @@
   command   = "npm run build"
   functions = "out_functions"
   publish   = "out_publish"
+
+[[headers]]
+  for = "/_next/static/chunks/*"
+  [headers.values]
+	cache-control = '''
+    public,
+    max-age=604800'''
+    
+[[headers]]
+  for = "/_next/static/css/*"
+  [headers.values]
+	cache-control = '''
+    public,
+    max-age=604800'''
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+	cache-control = '''
+    public,
+    max-age=86400'''
+
+
