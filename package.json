@@ -8,9 +8,18 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@headlessui/react": "^0.2.0",
+    "@tailwindcss/typography": "^0.2.0",
+    "@tailwindcss/ui": "^0.6.2",
+    "gray-matter": "^4.0.2",
     "next": "latest",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "remark": "^12.0.1",
+    "remark-html": "^13.0.1",
+    "tailwindcss": "^1.8.12"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
