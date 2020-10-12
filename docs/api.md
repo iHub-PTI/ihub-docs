@@ -10,23 +10,23 @@ A data entity is an object in a data model.
 
 #### Doctors
 
-| Key | Description                              | Type   | Required | FHIR ENTITY       | FHIR FIELD                      |
-| --- | ---------------------------------------- | ------ | -------- | ----------------- | ------------------------------- |
-|     | Picture                                  | String |          | PERSON            | Photo                           |
-|     | First Name                               | String | \*       | PERSON            | Name (HumanName -> Family Name) |
-|     | Last Name                                | String | \*       | PERSON            | Name (HumanName -> Given Name)  |
-|     | Languages                                | String | \*       | PERSON            | Communication (CommonLanguage)  |
-|     | Biography                                | String |          | PERSON            |                                 |
-|     | Date of Birth                            | String | \*       | PERSON            | Bithdate                        |
-|     | Gender                                   | String | \*       | PERSON            | Gender                          |
-|     | Email                                    | String | \*       | PERSON            | Telecom (ContactPoint)          |
-|     | Phone                                    | String | \*       | PERSON            | Telecom (ContactPoint)          |
-|     | Street Address                           | String | \*       | PERSON            | Address -> line                 |
-|     | City                                     | String | \*       | PERSON            | Address -> city                 |
-|     | Locality (Neighbourhood)                 | String | \*       | PERSON            | Address -> district             |
-|     | Address Reference (Description)          | String |          | PERSON            | Address -> text                 |
-|     | Medical Speciality                       | String | \*       | PRACTITIONER ROLE | Specialty (Code + Description)  |
-|     | Medical License ID (Rgistro Profesional) | String | \*       | PRACTITIONER ROLE | Identifier                      |
+| Key           | Description                              | Type   | Required | FHIR ENTITY       | FHIR FIELD                      |
+| ------------- | ---------------------------------------- | ------ | -------- | ----------------- | ------------------------------- |
+|               | Picture                                  | String |          | PERSON            | Photo                           |
+| givenName     | First Name                               | String | \*       | PERSON            | Name (HumanName -> Family Name) |
+| familyName    | Last Name                                | String | \*       | PERSON            | Name (HumanName -> Given Name)  |
+|               | Languages                                | String | \*       | PERSON            | Communication (CommonLanguage)  |
+|               | Biography                                | String |          | PERSON            |                                 |
+|               | Date of Birth                            | String | \*       | PERSON            | Bithdate                        |
+| gender        | Gender                                   | String | \*       | PERSON            | Gender                          |
+| email         | Email                                    | String | \*       | PERSON            | Telecom (ContactPoint)          |
+| phone         | Phone                                    | String | \*       | PERSON            | Telecom (ContactPoint)          |
+| street        | Street Address                           | String | \*       | PERSON            | Address -> line                 |
+| city          | City                                     | String | \*       | PERSON            | Address -> city                 |
+| neighborhood  | Locality (Neighbourhood)                 | String | \*       | PERSON            | Address -> district             |
+| reference     | Address Reference (Description)          | String |          | PERSON            | Address -> text                 |
+|               | Medical Speciality                       | String | \*       | PRACTITIONER ROLE | Specialty (Code + Description)  |
+|               | Medical License ID (Rgistro Profesional) | String | \*       | PRACTITIONER ROLE | Identifier                      |
 
 **Notes:**
 
@@ -41,20 +41,20 @@ A data entity is an object in a data model.
 
 #### Patients
 
-| Key | Description                     | Type   | Required | FHIR ENTITY | FHIR FIELD                      |
-| --- | ------------------------------- | ------ | -------- | ----------- | ------------------------------- |
-|     | Picture                         | String |          | PERSON      | Photo                           |
-|     | First Name                      | String | \*       | PERSON      | Name (HumanName -> Family Name) |
-|     | Last Name                       | String | \*       | PERSON      | Name (HumanName -> Given Name)  |
-|     | Date of Birth                   | String | \*       | PERSON      | Bithdate                        |
-|     | Occupation                      | String |          |             |                                 |
-|     | Gender                          | String | \*       | PERSON      | Gender                          |
-|     | Email                           | String | \*       | PERSON      | Telecom (ContactPoint)          |
-|     | Phone                           | String | \*       | PERSON      | Telecom (ContactPoint)          |
-|     | Street Address                  | String | \*       | PERSON      | Address -> line                 |
-|     | City                            | String | \*       | PERSON      | Address -> city                 |
-|     | Locality (Neighbourhood)        | String | \*       | PERSON      | Address -> district             |
-|     | Address Reference (Description) | String |          | PERSON      | Address -> text                 |
+| Key             | Description                     | Type   | Required | FHIR ENTITY | FHIR FIELD                      |
+| --------------- | ------------------------------- | ------ | -------- | ----------- | ------------------------------- |
+|                 | Picture                         | String |          | PERSON      | Photo                           |
+| givenName       | First Name                      | String | \*       | PERSON      | Name (HumanName -> Family Name) |
+| familyName      | Last Name                       | String | \*       | PERSON      | Name (HumanName -> Given Name)  |
+|                 | Date of Birth                   | String | \*       | PERSON      | Bithdate                        |
+|                 | Occupation                      | String |          |             |                                 |
+| gender          | Gender                          | String | \*       | PERSON      | Gender                          |
+| email           | Email                           | String | \*       | PERSON      | Telecom (ContactPoint)          |
+| phone           | Phone                           | String | \*       | PERSON      | Telecom (ContactPoint)          |
+| street          | Street Address                  | String | \*       | PERSON      | Address -> line                 |
+| city            | City                            | String | \*       | PERSON      | Address -> city                 |
+| neighborhood    | Locality (Neighbourhood)        | String | \*       | PERSON      | Address -> district             |
+| reference       | Address Reference (Description) | String |          | PERSON      | Address -> text                 |
 
 #### Appointments (Events)
 
