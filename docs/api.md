@@ -12,12 +12,12 @@ A data entity is an object in a data model.
 
 | Key           | Description                              | Type   | Required | FHIR ENTITY       | FHIR FIELD                      |
 | ------------- | ---------------------------------------- | ------ | -------- | ----------------- | ------------------------------- |
-|               | Picture                                  | String |          | PERSON            | Photo                           |
+| photo         | Picture                                  | String |          | PERSON            | Photo                           |
 | givenName     | First Name                               | String | \*       | PERSON            | Name (HumanName -> Family Name) |
 | familyName    | Last Name                                | String | \*       | PERSON            | Name (HumanName -> Given Name)  |
-|               | Languages                                | String | \*       | PERSON            | Communication (CommonLanguage)  |
-|               | Biography                                | String |          | PERSON            |                                 |
-|               | Date of Birth                            | String | \*       | PERSON            | Bithdate                        |
+| language      | Languages                                | String | \*       | PERSON            | Communication (CommonLanguage)  |
+| biography     | Biography                                | String |          | PERSON            |                                 |
+| bithdate      | Date of Birth                            | String | \*       | PERSON            | Bithdate                        |
 | gender        | Gender                                   | String | \*       | PERSON            | Gender                          |
 | email         | Email                                    | String | \*       | PERSON            | Telecom (ContactPoint)          |
 | phone         | Phone                                    | String | \*       | PERSON            | Telecom (ContactPoint)          |
@@ -25,8 +25,8 @@ A data entity is an object in a data model.
 | city          | City                                     | String | \*       | PERSON            | Address -> city                 |
 | neighborhood  | Locality (Neighbourhood)                 | String | \*       | PERSON            | Address -> district             |
 | reference     | Address Reference (Description)          | String |          | PERSON            | Address -> text                 |
-|               | Medical Speciality                       | String | \*       | PRACTITIONER ROLE | Specialty (Code + Description)  |
-|               | Medical License ID (Rgistro Profesional) | String | \*       | PRACTITIONER ROLE | Identifier                      |
+| specialty     | Medical Speciality                       | String | \*       | PRACTITIONER ROLE | Specialty (Code + Description)  |
+| licenseId     | Medical License ID (Registro Profesional)| String | \*       | PRACTITIONER ROLE | Identifier                      |
 
 **Notes:**
 
