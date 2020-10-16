@@ -8,10 +8,16 @@ export default function Home() {
       <Head>
         <title>iHub</title>
       </Head>
-      <div className='relative bg-gray-800 overflow-hidden'>
+      <div
+        className='relative overflow-hidden bg-gray-800'
+        // style={{
+        //   backgroundColor: '#27BEC2',
+        //   backgroundImage: 'linear-gradient(140deg, #8DA2FB 0%, #5850EC 25%, #42389D 75%)',
+        // }}
+      >
         <div className='hidden sm:block sm:absolute sm:inset-0'>
           <svg
-            className='absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-gray-700 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0'
+            className='absolute bottom-0 right-0 mb-48 text-gray-700 transform translate-x-1/2 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0'
             width={364}
             height={384}
             viewBox='0 0 364 384'
@@ -35,14 +41,14 @@ export default function Home() {
         <div className='relative pt-6 pb-12 sm:pb-32'>
           <Navbar />
           <main className='mt-8 sm:mt-16 md:mt-20 lg:mt-24'>
-            <div className='mx-auto max-w-screen-xl'>
+            <div className='max-w-screen-xl mx-auto'>
               <div className='lg:grid lg:grid-cols-12 lg:gap-8'>
                 <div className='px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center'>
                   <div>
                     <a
                       href='https://github.com/iHub-PTI'
                       target='_blank'
-                      className='inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200'
+                      className='inline-flex items-center p-1 pr-2 text-white bg-gray-900 rounded-full sm:text-base lg:text-sm xl:text-base hover:text-gray-200'
                     >
                       <span className='px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full'>
                         License: GPL v3
@@ -51,7 +57,7 @@ export default function Home() {
 
                       {/* Heroicon name: chevron-right */}
                       <svg
-                        className='ml-2 w-5 h-5 text-gray-500'
+                        className='w-5 h-5 ml-2 text-gray-500'
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 20 20'
                         fill='currentColor'
@@ -63,7 +69,7 @@ export default function Home() {
                         />
                       </svg>
                     </a>
-                    <h2 className='mt-4 text-3xl tracking-tight leading-10 font-extrabold text-white sm:mt-5 sm:leading-none sm:text-5xl lg:mt-6 lg:text-4xl xl:text-4xl'>
+                    <h2 className='mt-4 text-3xl font-extrabold leading-10 tracking-tight text-white sm:mt-5 sm:leading-none sm:text-5xl lg:mt-6 lg:text-4xl xl:text-4xl'>
                       The open <span className='text-indigo-400'>Health Ecosystem</span>{' '}
                       <br className='hidden md:inline' />
                       for Paraguay and beyond
@@ -77,7 +83,7 @@ export default function Home() {
                       <div className='rounded-md shadow'>
                         <a
                           href='#'
-                          className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10'
+                          className='flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo md:py-4 md:text-lg md:px-10'
                         >
                           Get started
                         </a>
@@ -85,25 +91,22 @@ export default function Home() {
                       <div className='mt-3 rounded-md shadow sm:mt-0 sm:ml-3'>
                         <a
                           href='#'
-                          className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10'
+                          className='flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-indigo-600 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo md:py-4 md:text-lg md:px-10'
                         >
                           Live demo
                         </a>
                       </div>
                     </div>
 
-                    <p className='mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10'>
+                    <p className='mt-8 text-sm font-semibold tracking-wide text-white uppercase sm:mt-10'>
                       Provided by
                     </p>
-                    <div className='mt-2 w-full sm:mx-auto sm:max-w-lg lg:ml-0'>
-                      <div className='flex flex-wrap items-start justify-between'>
+                    <div className='w-full mt-2 sm:mx-auto sm:max-w-lg lg:ml-0'>
+                      <div className='flex flex-wrap items-start justify-start lg:justify-start sm:justify-center'>
                         <div className='flex justify-center px-1 py-3'>
                           <img className='h-9 sm:h-10' src='/img/pti-logo.svg' alt='PTI' />
                         </div>
-                        <div className='flex justify-center px-1 py-3'>
-                          <img className='h-9 sm:h-10' src='/img/mspbs-logo.png' alt='mspbs' />
-                        </div>
-                        <div className='flex justify-center px-1 py-3'>
+                        <div className='flex justify-center px-1 py-3 ml-6'>
                           <img className='h-9 sm:h-10' src='/img/penguin-academy_logo.svg' alt='Penguin Academy' />
                         </div>
                       </div>
@@ -112,7 +115,7 @@ export default function Home() {
                 </div>
 
                 <img
-                  className='relative mx-auto p-12 mt-12 sm:mt-16 lg:mt-0 lg:col-span-6'
+                  className='relative p-12 mx-auto mt-12 sm:mt-16 lg:mt-0 lg:col-span-6'
                   width={490}
                   src='/img/placeholder.svg'
                   alt=''
@@ -128,10 +131,10 @@ export default function Home() {
   Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
   Read the documentation to get started: https://tailwindui.com/documentation
 */}
-      <div className='py-16 bg-gray-50 overflow-hidden lg:py-24'>
-        <div className='relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl'>
+      <div className='py-16 overflow-hidden bg-gray-50 lg:py-24'>
+        <div className='relative max-w-xl px-4 mx-auto sm:px-6 lg:px-8 lg:max-w-screen-xl'>
           <svg
-            className='hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4'
+            className='absolute hidden transform -translate-x-1/2 lg:block left-full -translate-y-1/4'
             width={404}
             height={784}
             fill='none'
@@ -152,17 +155,17 @@ export default function Home() {
             <rect width={404} height={784} fill='url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)' />
           </svg>
           <div className='relative'>
-            <h3 className='text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10'>
+            <h3 className='text-3xl font-extrabold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl sm:leading-10'>
               Why iHub?
             </h3>
-            <p className='mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500'>
+            <p className='max-w-3xl mx-auto mt-4 text-xl leading-7 text-center text-gray-500'>
               We believe that everyone should have easy access to their medical history and to doctors. COVID-19 has
               shown how important digitalization is for the Paraguayan health system.
             </p>
           </div>
           <div className='relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center'>
             <div className='relative'>
-              <h4 className='text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9'>
+              <h4 className='text-2xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-3xl sm:leading-9'>
                 Built on international standards
               </h4>
               <p className='mt-3 text-lg leading-7 text-gray-500'>
@@ -174,10 +177,10 @@ export default function Home() {
                 <li>
                   <div className='flex'>
                     <div className='flex-shrink-0'>
-                      <div className='flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white'>
+                      <div className='flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md'>
                         {/* Heroicon name: scale */}
                         <svg
-                          className='h-6 w-6'
+                          className='w-6 h-6'
                           xmlns='http://www.w3.org/2000/svg'
                           fill='none'
                           viewBox='0 0 24 24'
@@ -193,7 +196,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className='ml-4'>
-                      <h5 className='text-lg leading-6 font-medium text-gray-900'>International Privacy Level</h5>
+                      <h5 className='text-lg font-medium leading-6 text-gray-900'>International Privacy Level</h5>
                       <p className='mt-2 text-base leading-6 text-gray-500'>
                         Health Records require a high level of privacy. This is why we follow international
                         best-practices. We draw inspiration from GDPR (EU Privacy Law) and HIPAA (US) while complying
@@ -205,10 +208,10 @@ export default function Home() {
                 <li className='mt-10'>
                   <div className='flex'>
                     <div className='flex-shrink-0'>
-                      <div className='flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white'>
+                      <div className='flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md'>
                         {/* Heroicon name: globe-alt */}
                         <svg
-                          className='h-6 w-6'
+                          className='w-6 h-6'
                           xmlns='http://www.w3.org/2000/svg'
                           fill='none'
                           viewBox='0 0 24 24'
@@ -224,7 +227,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className='ml-4'>
-                      <h5 className='text-lg leading-6 font-medium text-gray-900'>
+                      <h5 className='text-lg font-medium leading-6 text-gray-900'>
                         International Interoperability Standars
                       </h5>
                       <p className='mt-2 text-base leading-6 text-gray-500'>
@@ -238,10 +241,10 @@ export default function Home() {
                 <li className='mt-10'>
                   <div className='flex'>
                     <div className='flex-shrink-0'>
-                      <div className='flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white'>
+                      <div className='flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md'>
                         {/* Heroicon name: lightning-bolt */}
                         <svg
-                          className='h-6 w-6'
+                          className='w-6 h-6'
                           xmlns='http://www.w3.org/2000/svg'
                           fill='none'
                           viewBox='0 0 24 24'
@@ -257,7 +260,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className='ml-4'>
-                      <h5 className='text-lg leading-6 font-medium text-gray-900'>Accessibility</h5>
+                      <h5 className='text-lg font-medium leading-6 text-gray-900'>Accessibility</h5>
                       <p className='mt-2 text-base leading-6 text-gray-500'>
                         This system should be available for everyone! So special care is taken to design it accessible -
                         we consider 2 distinct dimensions: (1) Contents being accessible to people with handicap. And
@@ -268,9 +271,9 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className='mt-10 -mx-4 relative lg:mt-0'>
+            <div className='relative mt-10 -mx-4 lg:mt-0'>
               <svg
-                className='absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden'
+                className='absolute transform -translate-x-1/2 translate-y-16 left-1/2 lg:hidden'
                 width={784}
                 height={404}
                 fill='none'
@@ -294,7 +297,7 @@ export default function Home() {
             </div>
           </div>
           <svg
-            className='hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12'
+            className='absolute hidden transform translate-x-1/2 translate-y-12 lg:block right-full'
             width={404}
             height={784}
             fill='none'
@@ -317,7 +320,7 @@ export default function Home() {
           <div className='relative mt-12 sm:mt-16 lg:mt-24'>
             <div className='lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center'>
               <div className='lg:col-start-2'>
-                <h4 className='text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9'>
+                <h4 className='text-2xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-3xl sm:leading-9'>
                   Free as in Freedom
                 </h4>
                 <p className='mt-3 text-lg leading-7 text-gray-500'>
@@ -329,11 +332,11 @@ export default function Home() {
                   <li>
                     <div className='flex'>
                       <div className='flex-shrink-0'>
-                        <div className='flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white'>
+                        <div className='flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md'>
                           {/* Heroicon name: shield-check */}
                           <svg
                             xmlns='http://www.w3.org/2000/svg'
-                            className='h-6 w-6'
+                            className='w-6 h-6'
                             fill='none'
                             viewBox='0 0 24 24'
                             stroke='currentColor'
@@ -348,7 +351,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className='ml-4'>
-                        <h5 className='text-lg leading-6 font-medium text-gray-900'>Security first</h5>
+                        <h5 className='text-lg font-medium leading-6 text-gray-900'>Security first</h5>
                         <p className='mt-2 text-base leading-6 text-gray-500'>
                           We apply security by design and use open standards such as oAuth2, OpenID Connect and JWT. As
                           all the code in the system can be accessed openly, it is possible for anyone with the skills
@@ -360,10 +363,10 @@ export default function Home() {
                   <li className='mt-10'>
                     <div className='flex'>
                       <div className='flex-shrink-0'>
-                        <div className='flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white'>
+                        <div className='flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md'>
                           {/* Heroicon name: book-open */}
                           <svg
-                            className='h-6 w-6'
+                            className='w-6 h-6'
                             xmlns='http://www.w3.org/2000/svg'
                             fill='none'
                             viewBox='0 0 24 24'
@@ -379,7 +382,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className='ml-4'>
-                        <h5 className='text-lg leading-6 font-medium text-gray-900'>Learn from the code</h5>
+                        <h5 className='text-lg font-medium leading-6 text-gray-900'>Learn from the code</h5>
                         <p className='mt-2 text-base leading-6 text-gray-500'>
                           As all code is available open, you can use it to learn or contribute to the existing system by
                           adding functionality, fixing problems or improving accessibilitiy!
@@ -389,9 +392,9 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className='mt-10 -mx-4 relative lg:mt-0 lg:col-start-1'>
+              <div className='relative mt-10 -mx-4 lg:mt-0 lg:col-start-1'>
                 <svg
-                  className='absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden'
+                  className='absolute transform -translate-x-1/2 translate-y-16 left-1/2 lg:hidden'
                   width={784}
                   height={404}
                   fill='none'
@@ -417,7 +420,7 @@ export default function Home() {
           </div>
           <div className='relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center'>
             <div className='relative'>
-              <h4 className='text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9'>
+              <h4 className='text-2xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-3xl sm:leading-9'>
                 Crafted by humans and teamwork
               </h4>
               <p className='mt-3 text-lg leading-7 text-gray-500'>
@@ -425,22 +428,22 @@ export default function Home() {
                 of experts from Paraguay and abroad. We use Design Thinking and agile development to place the human at
                 the center of technology.
               </p>
-              <a href='#' className='mt-5 text-indigo-600 flex group'>
+              <a href='#' className='flex mt-5 text-indigo-600 group'>
                 <span className='text-base font-medium'>Learn more about the team and the process</span>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'
                   viewBox='0 0 24 24'
                   stroke='currentColor'
-                  className='h-6 w-6 ml-2 group-hover:translate-x-2 transform transition duration-500 ease-in-out'
+                  className='w-6 h-6 ml-2 transition duration-500 ease-in-out transform group-hover:translate-x-2'
                 >
                   <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M14 5l7 7m0 0l-7 7m7-7H3' />
                 </svg>
               </a>
             </div>
-            <div className='mt-10 -mx-4 relative lg:mt-0'>
+            <div className='relative mt-10 -mx-4 lg:mt-0'>
               <svg
-                className='absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden'
+                className='absolute transform -translate-x-1/2 translate-y-16 left-1/2 lg:hidden'
                 width={784}
                 height={404}
                 fill='none'
@@ -473,11 +476,11 @@ export default function Home() {
           <div className='flex-1 bg-gray-50' />
           <div className='flex-1 bg-gray-900' />
         </div>
-        <div className='relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='bg-gradient-to-r from-orange-400 to-pink-500 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4'>
-            <div className='pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20'>
+        <div className='relative max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8'>
+          <div className='overflow-hidden rounded-lg shadow-xl bg-gradient-to-r from-orange-400 to-pink-500 lg:grid lg:grid-cols-2 lg:gap-4'>
+            <div className='px-6 pt-10 pb-12 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20'>
               <div className='lg:self-center'>
-                <h2 className='text-3xl leading-9 font-extrabold text-white sm:text-4xl sm:leading-10'>
+                <h2 className='text-3xl font-extrabold leading-9 text-white sm:text-4xl sm:leading-10'>
                   <span className='block'>Ready to dive in?</span>
                   <span className='block text-red-900'>Start building your app today.</span>
                 </h2>
@@ -487,15 +490,15 @@ export default function Home() {
                 </p>
                 <a
                   href='#'
-                  className='mt-8 bg-orange-100 border border-transparent rounded-md shadow py-3 px-6 inline-flex items-center text-base leading-6 font-medium text-red-600 hover:text-red-500 focus:outline-none focus:border-red-300 focus:shadow-outline-red transition duration-150 ease-in-out'
+                  className='inline-flex items-center px-6 py-3 mt-8 text-base font-medium leading-6 text-red-600 transition duration-150 ease-in-out bg-orange-100 border border-transparent rounded-md shadow hover:text-red-500 focus:outline-none focus:border-red-300 focus:shadow-outline-red'
                 >
                   Explore the Docs
                 </a>
               </div>
             </div>
-            <div className='relative pb-3/5 -mt-6 md:pb-1/2'>
+            <div className='relative -mt-6 pb-3/5 md:pb-1/2'>
               <img
-                className='absolute inset-0 w-full h-full transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20'
+                className='absolute inset-0 object-cover object-left-top w-full h-full transform translate-x-6 translate-y-6 rounded-md sm:translate-x-16 lg:translate-y-20'
                 src='/img/placeholder.svg'
                 alt='App screenshot'
               />
