@@ -43,7 +43,7 @@ export const Navbar = () => {
                     Documentation
                   </a>
                 </Link>
-                <Link href='#'>
+                <Link href='/marketplace'>
                   <a className='font-medium text-white transition duration-150 ease-in-out hover:text-gray-300'>
                     Marketplace
                   </a>
