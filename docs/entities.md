@@ -18,7 +18,7 @@ Required means that the value cannot be empty or null
 
 ### Doctors
 
-| Key                | Description                               | Type      | Required | FHIR ENTITY  | FHIR FIELD                      | expected value                  |
+| Key                | Description                               | Type      | Required | FHIR ENTITY  | FHIR FIELD                      | EXPECTED VALUE                  |
 | ------------------ | ----------------------------------------- | --------- | -------- | ------------ | ------------------------------- | ------------------------------- |
 | photo              | Picture                                   | String    |          | PRACTITIONER | Photo                           |                                 |
 | givenName          | First Name                                | String    | \*       | PRACTITIONER | Name (HumanName -> Family Name) |                                 |
@@ -49,20 +49,20 @@ Required means that the value cannot be empty or null
 
 ### Patients
 
-| Key          | Description                     | Type   | Required | FHIR ENTITY | FHIR FIELD                      |
-| ------------ | ------------------------------- | ------ | -------- | ----------- | ------------------------------- |
-| photo        | Picture                         | String |          | PERSON      | Photo                           |
-| givenName    | First Name                      | String | \*       | PERSON      | Name (HumanName -> Family Name) |
-| familyName   | Last Name                       | String | \*       | PERSON      | Name (HumanName -> Given Name)  |
-| birthDate    | Date of Birth                   | String | \*       | PERSON      | Bithdate                        |
-| job          | Occupation                      | String |          |             |                                 |
-| gender       | Gender                          | String | \*       | PERSON      | Gender                          |
-| email        | Email                           | String | \*       | PERSON      | Telecom (ContactPoint)          |
-| phone        | Phone                           | String | \*       | PERSON      | Telecom (ContactPoint)          |
-| street       | Street Address                  | String | \*       | PERSON      | Address -> line                 |
-| city         | City                            | String | \*       | PERSON      | Address -> city                 |
-| neighborhood | Locality (Neighbourhood)        | String | \*       | PERSON      | Address -> district             |
-| reference    | Address Reference (Description) | String |          | PERSON      | Address -> text                 |
+| Key          | Description                     | Type   | Required | FHIR ENTITY | FHIR FIELD                      | EXPECTED VALUE                  |
+| ------------ | ------------------------------- | ------ | -------- | ----------- | ------------------------------- | ------------------------------- |
+| photo        | Picture                         | String |          | PATIENT     | Photo                           |                                 |
+| givenName    | First Name                      | String | \*       | PATIENT     | Name (HumanName -> Family Name) |                                 |
+| familyName   | Last Name                       | String | \*       | PATIENT     | Name (HumanName -> Given Name)  |                                 |
+| birthDate    | Date of Birth                   | String | \*       | PATIENT     | Birthdate                       | (YYYY-MM-DD)                    |
+| job          | Occupation                      | String |          | PATIENT     | Extension                       |                                 |
+| gender       | Gender                          | String | \*       | PATIENT     | Gender                          | male / female / other / unknown |
+| email        | Email                           | String | \*       | PATIENT     | Telecom (ContactPoint)          |                                 |
+| phone        | Phone                           | String |          | PATIENT     | Telecom (ContactPoint)          |                                 |
+| street       | Street Address                  | String |          | PATIENT     | Address -> line0                |                                 |
+| city         | City                            | String |          | PATIENT     | Address -> city                 |                                 |
+| neighborhood | Locality (Neighbourhood)        | String |          | PATIENT     | Address -> line1                |                                 |
+| reference    | Address Reference (Description) | String |          | PATIENT     | Address -> text                 |                                 |
 
 ### Appointments (Events)
 
