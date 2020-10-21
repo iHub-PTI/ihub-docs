@@ -18,23 +18,23 @@ Required means that the value cannot be empty or null
 
 ### Doctors
 
-| Key          | Description                               | Type      | Required | FHIR ENTITY  | FHIR FIELD                      | expected value                  |
-| ------------ | ----------------------------------------- | --------- | -------- | ------------ | ------------------------------- | ------------------------------- |
-| photo        | Picture                                   | String    |          | PRACTITIONER | Photo                           |                                 |
-| givenName    | First Name                                | String    | \*       | PRACTITIONER | Name (HumanName -> Family Name) |                                 |
-| familyName   | Last Name                                 | String    | \*       | PRACTITIONER | Name (HumanName -> Given Name)  |                                 |
-| languages    | Languages                                 | String [] | \*       | PRACTITIONER | Communication (CommonLanguage)  | Standar bcp:47                  |
-| biography    | Biography                                 | String    |          | PRACTITIONER | Extension                       |                                 |
-| bithDate     | Date of Birth                             | String    | \*       | PRACTITIONER | Bithdate                        | (YYYY-MM-DD)                    |
-| gender       | Gender                                    | String    | \*       | PRACTITIONER | Gender                          | male / female / other / unknown |
-| email        | Email                                     | String    | \*       | PRACTITIONER | Telecom (ContactPoint)          |                                 |
-| phone        | Phone                                     | String    |          | PRACTITIONER | Telecom (ContactPoint)          |                                 |
-| street       | Street Address                            | String    |          | PRACTITIONER | Address -> line0                |                                 |
-| city         | City                                      | String    |          | PRACTITIONER | Address -> city                 |                                 |
-| neighborhood | Locality (Neighbourhood)                  | String    |          | PRACTITIONER | Address -> line1                |                                 |
-| reference    | Address Reference (Description)           | String    |          | PRACTITIONER | Address -> text                 |                                 |
-| specialtyId  | Medical Speciality ID                     | String    | \*       | PRACTITIONER | Qualification (Code)            | Get by Specialities API         |
-| licenseId    | Medical License ID (Registro Profesional) | String    | \*       | PRACTITIONER | Qualification Identifier        |                                 |
+| Key                | Description                               | Type      | Required | FHIR ENTITY  | FHIR FIELD                      | expected value                  |
+| ------------------ | ----------------------------------------- | --------- | -------- | ------------ | ------------------------------- | ------------------------------- |
+| photo              | Picture                                   | String    |          | PRACTITIONER | Photo                           |                                 |
+| givenName          | First Name                                | String    | \*       | PRACTITIONER | Name (HumanName -> Family Name) |                                 |
+| familyName         | Last Name                                 | String    | \*       | PRACTITIONER | Name (HumanName -> Given Name)  |                                 |
+| languages          | Languages                                 | String [] | \*       | PRACTITIONER | Communication (CommonLanguage)  | Standar bcp:47                  |
+| biography          | Biography                                 | String    |          | PRACTITIONER | Extension                       |                                 |
+| birthDate          | Date of Birth                             | String    | \*       | PRACTITIONER | Bithdate                        | (YYYY-MM-DD)                    |
+| gender             | Gender                                    | String    | \*       | PRACTITIONER | Gender                          | male / female / other / unknown |
+| email              | Email                                     | String    | \*       | PRACTITIONER | Telecom (ContactPoint)          |                                 |
+| phone              | Phone                                     | String    |          | PRACTITIONER | Telecom (ContactPoint)          |                                 |
+| street             | Street Address and Number                 | String    |          | PRACTITIONER | Address -> line0                |                                 |
+| city               | City                                      | String    |          | PRACTITIONER | Address -> city                 |                                 |
+| neighborhood       | Locality (Neighbourhood)                  | String    |          | PRACTITIONER | Address -> line1                |                                 |
+| addressDescription | Address Reference (Description)           | String    |          | PRACTITIONER | Address -> text                 |                                 |
+| specialties        | Medical Specialty ID                      | String [] | \*       | PRACTITIONER | Qualification (Code)            | Get by Specialty API            |
+| license            | Medical License ID (Registro Profesional) | String    | \*       | PRACTITIONER | Qualification Identifier        |                                 |
 
 **Notes:**
 
@@ -54,7 +54,7 @@ Required means that the value cannot be empty or null
 | photo        | Picture                         | String |          | PERSON      | Photo                           |
 | givenName    | First Name                      | String | \*       | PERSON      | Name (HumanName -> Family Name) |
 | familyName   | Last Name                       | String | \*       | PERSON      | Name (HumanName -> Given Name)  |
-| bithDate     | Date of Birth                   | String | \*       | PERSON      | Bithdate                        |
+| birthDate    | Date of Birth                   | String | \*       | PERSON      | Bithdate                        |
 | job          | Occupation                      | String |          |             |                                 |
 | gender       | Gender                          | String | \*       | PERSON      | Gender                          |
 | email        | Email                           | String | \*       | PERSON      | Telecom (ContactPoint)          |

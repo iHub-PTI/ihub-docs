@@ -23,7 +23,7 @@ The iHub Health API allows you to access all queries related to manipulating the
 For simplicity, expect the following error codes:
 
 - 200 (OK)
-- 400 (Client Error). There should be a `{messsage: string}` that includes a description of what went wrong.
+- 400 (Client Error). There should be a `{messsages: string[]}` that includes a description of what went wrong.
 - 500 (Server Error). Something went wrong. It was probably you - but maybe it was us. 🤓 If you can't figure it out, open an issue!
 
 ### Authentication
@@ -34,33 +34,23 @@ Expect the following error codes when facing authentication troubles:
 
 - 401 (Not Authenticated). The access_token is not present, expired or valid.
 
-## Doctors - Available Endpoints
+# Currently authenticated User
 
-### [GET] /profile/doctors/:id
+## Doctors
+
+### [GET] /profile/doctor/
 
 _[Authorized User]_
 
-Read a Doctor and Doctors Appointment Settings Details
+Read a Doctor and Doctors
 
 **Parameters:** none
 
-**Return Value:** Doctor Profile and Appointment Settings
+**Return Value:** Doctor Profile
 
 ---
 
-### [POST] /profile/doctors
-
-_[Authorized User]_
-
-Create a new doctor
-
-**Parameters:** Doctor
-
-**Return Value:** Doctor (new, including new ID)
-
----
-
-### [POST] /profile/doctors/:id
+### [PUT] /profile/doctor/
 
 _[Authorized User]_
 
@@ -70,7 +60,29 @@ Update an existing doctor
 
 **Return Value:** Doctor (updated)
 
----
+## Patients
+
+### [GET] /profile/patient/
+
+_[Authorized User]_
+
+Read a Patient Profile
+
+**Parameters:** none
+
+**Return Value:** Patient
+
+### [PUT] /profile/patient/
+
+_[Authorized User]_
+
+Update a Patient Profile
+
+**Parameters:** Patient (any partial)
+
+**Return Value:** Appointments (updated)
+
+# Doctors - Available Endpoints
 
 ### [GET] /doctors/:id
 
@@ -88,13 +100,13 @@ Read a Doctor's public details
 
 _[Public]_
 
-Searcj for Doctors and List Results
+Search for Doctors and List Results
 
 **Parameters (Query String):**
 
 - text: String
 - languages: String[]
-- specialities: String[]
+- specialties: String[]
 
 **Return Value:** List of Doctors with next availabilities (date)
 
@@ -138,55 +150,3 @@ Create an Appointment as a patient
 > Start time and length has to be a valid timeslot.
 
 > type will be stored as "Teleconsultation"
-
----
-
-### [POST] /profile/doctors/:id/appointments
-
-_[Authorized User]_
-
-Create an Appointment as a doctor
-
-**Parameters:** Appointment
-
-**Return Value:** Appointments (including new ID)
-
-> No restrictions for time and length of appointment.
-
-> type will be stored as "DoctorEvent"
-
-## Patients - Available Endpoints
-
-### [GET] /profile/patients/:id
-
-_[Authorized User]_
-
-Read a Patient Profile
-
-**Parameters:** none
-
-**Return Value:** Patient
-
----
-
-### [POST] /profile/patients
-
-_[Authorized User]_
-
-Create a Patient Profile
-
-**Parameters:** Patient
-
-**Return Value:** Appointments (new, including new ID)
-
----
-
-### [POST] /profile/patients/:id
-
-_[Authorized User]_
-
-Update a Patient Profile
-
-**Parameters:** Patient (any partial)
-
-**Return Value:** Appointments (updated)
