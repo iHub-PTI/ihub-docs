@@ -150,3 +150,22 @@ Create an Appointment as a patient
 > Start time and length has to be a valid timeslot.
 
 > type will be stored as "Teleconsultation"
+
+### [GET] /specialities
+
+_[Public]_
+
+Get the list of Specialities provided by Minister
+
+**Return Value:** List of Specialities (id and description)
+
+```
+[
+    {
+        id: number,
+        description: String
+    }
+]
+```
+
+---
