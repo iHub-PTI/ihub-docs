@@ -1,4 +1,5 @@
 ---
+section: 'Core'
 title: 'Entities'
 date: '2020-10-16T05:35:07.322Z'
 priority: 100

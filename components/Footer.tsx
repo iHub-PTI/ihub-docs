@@ -12,7 +12,7 @@ export const Footer = () => {
             </Link>
           </div>
           <div className='px-5 py-2'>
-            <Link href='/docs/api'>
+            <Link href='/docs'>
               <a className='text-base leading-6 text-gray-300 hover:text-white'>Documentation</a>
             </Link>
           </div>

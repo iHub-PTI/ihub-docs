@@ -28,7 +28,7 @@ export const Navbar = () => {
                 </div>
               </div>
               <div className='hidden space-x-10 md:flex md:ml-10'>
-                <Link href='#'>
+                <Link href='/'>
                   <a className='font-medium text-white transition duration-150 ease-in-out hover:text-gray-300'>
                     Overview
                   </a>
@@ -38,7 +38,7 @@ export const Navbar = () => {
                     Getting Started
                   </a>
                 </Link>
-                <Link href='/docs/api'>
+                <Link href='/docs'>
                   <a className='font-medium text-white transition duration-150 ease-in-out hover:text-gray-300'>
                     Documentation
                   </a>
@@ -109,7 +109,7 @@ export const Navbar = () => {
                     </Link>
                   </Menu.Item>
                   <Menu.Item>
-                    <Link href='/docs/api'>
+                    <Link href='/docs'>
                       <a
                         className='block px-3 py-2 text-base font-medium text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50'
                         role='menuitem'

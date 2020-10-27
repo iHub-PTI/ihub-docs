@@ -49,8 +49,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!params) return { props: {} }
   if (typeof params.slug !== 'string') params.slug = params.slug[0]
 
-  const post = getPostBySlug('guides', params.slug, ['content', 'title', 'priority', 'date', 'slug', 'ogImage'])
-  const posts = getAllPosts('guides', ['slug', 'title'])
+  const post = getPostBySlug(['guides'], params.slug, ['content', 'title', 'priority', 'date', 'slug', 'ogImage'])
+  const posts = getAllPosts(['guides'], ['slug', 'title'])
 
   const content = await markdownToHtml(post.content || '')
 
@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts('guides', ['slug'])
+  const posts = getAllPosts(['guides'], ['slug'])
 
   return {
     paths: posts.map(post => {
