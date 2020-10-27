@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "postbuild": "bash ./scripts/download-docs.sh && next-on-netlify",
+    "postbuild": "next-on-netlify",
+    "prebuild": "bash ./scripts/download-docs.sh",
     "start": "next start",
     "type-check": "tsc"
   },
