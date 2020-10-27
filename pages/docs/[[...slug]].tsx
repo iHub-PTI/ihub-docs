@@ -243,7 +243,7 @@ const Subtree = ({ section }: { section: GroupedPost }) => {
   })
 
   useEffect(() => {
-    setShow(isCurrent)
+    if (isCurrent) setShow(true)
   }, [isCurrent])
 
   const [show, setShow] = useState(isCurrent)
