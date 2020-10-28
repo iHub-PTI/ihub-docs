@@ -169,4 +169,22 @@ Get the list of Specialities provided by Minister
 ]
 ```
 
----
+### [GET] /validation
+
+_[Public]_
+
+Generate code to validate user using the username from token (For now the code last 30 seconds)
+
+**Parameters:** none
+
+**Return Value:** code (Integer of 6 digits)
+
+### [GET] /validation/:code
+
+_[Public]_
+
+Validate the code using the username from token
+
+**Parameters:** none
+
+**Return Value:** true o false, depending if the code match with the one generate for the user and if it is still valid
