@@ -35,13 +35,21 @@ Expect the following error codes when facing authentication troubles:
 
 - 401 (Not Authenticated). The access_token is not present, expired or valid.
 
+### Levels of access
+
+We have three levels of access:
+
+1. Authorized = Specific permission needed (access token required AND permission)
+2. Authenticated = ALL logged in users (access token required)
+3. Public = All users (access token not required)
+
 # Currently authenticated User
 
 ## Doctors
 
 ### [GET] /profile/doctor/
 
-_[Authorized User]_
+_[Authorized]_
 
 Read a Doctor and Doctors
 
@@ -53,7 +61,7 @@ Read a Doctor and Doctors
 
 ### [PUT] /profile/doctor/
 
-_[Authorized User]_
+_[Authorized]_
 
 Update an existing doctor
 
@@ -65,7 +73,7 @@ Update an existing doctor
 
 ### [GET] /profile/patient/
 
-_[Authorized User]_
+_[Authorized]_
 
 Read a Patient Profile
 
@@ -75,7 +83,7 @@ Read a Patient Profile
 
 ### [PUT] /profile/patient/
 
-_[Authorized User]_
+_[Authorized]_
 
 Update a Patient Profile
 
@@ -138,7 +146,7 @@ Read a Doctor's availabilities
 
 ### [POST] /doctors/:id/appointments
 
-_[Public]_
+_[Authenticated]_
 
 Create an Appointment as a patient
 
@@ -168,23 +176,3 @@ Get the list of Specialities provided by Minister
     }
 ]
 ```
-
-### [GET] /validation
-
-_[Public]_
-
-Generate code to validate user using the username from token (For now the code last 30 seconds)
-
-**Parameters:** none
-
-**Return Value:** code (Integer of 6 digits)
-
-### [GET] /validation/:code
-
-_[Public]_
-
-Validate the code using the username from token
-
-**Parameters:** none
-
-**Return Value:** true o false, depending if the code match with the one generate for the user and if it is still valid
