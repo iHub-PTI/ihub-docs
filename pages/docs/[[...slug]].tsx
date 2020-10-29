@@ -107,8 +107,8 @@ export async function getStaticPaths() {
 
 function PostBody({ content }: { content: string }) {
   return (
-    <div className='flex-grow p-12 mx-auto overflow-scroll max-w-7xl'>
-      <div className='prose' dangerouslySetInnerHTML={{ __html: content }} />
+    <div className='flex-grow p-12 mx-auto overflow-scroll'>
+      <div className='prose prose-max-w-7xl' dangerouslySetInnerHTML={{ __html: content }} />
     </div>
   )
 }

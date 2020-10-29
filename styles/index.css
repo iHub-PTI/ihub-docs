@@ -3,3 +3,16 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.prose {
+  @apply max-w-full;
+}
+
+.prose-max-w-7xl > *:not(table):not(pre) {
+  max-width: 65ch;
+}
+
+.prose pre {
+  @apply table;
+  min-width: 65ch;
+}
