@@ -15,24 +15,24 @@ A Doctor is a natural person who is licensed to practice medicine. All Doctors i
 
 Overview of Data Model for a Doctor. The Doctor Resource implements the [FHIR Practitioner Resource](https://www.hl7.org/fhir/practitioner.html).
 
-| Key                | Type      | Required | Public | Readonly | Description                                                                                   | FHIR Resource                                   |
-| ------------------ | --------- | -------- | ------ | -------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| id                 | String    |          | \*     | \*       | Identifier                                                                                    |                                                 |
-| photoUrl           | String    |          | \*     |          | Picture                                                                                       | Practitioner -> Photo                           |
-| givenName          | String    | \*       | \*     |          | First Name                                                                                    | Practitioner -> Name (HumanName -> Family Name) |
-| familyName         | String    | \*       | \*     |          | Last Name                                                                                     | Practitioner -> Name (HumanName -> Given Name)  |
-| languages          | String [] | \*       | \*     |          | Languages <br> Standard bcp: 47                                                               | Practitioner -> Communication (CommonLanguage)  |
-| biography          | String    |          | \*     |          | Biography                                                                                     | Practitioner -> Extension                       |
-| birthDate          | String    | \*       |        |          | Date of Birth <br> _Acceptable Format:_ `YYYY-MM-DD`                                          | Practitioner -> Bithdate                        |
-| gender             | String    | \*       |        |          | Gender <br> _Acceptable Values:_ <br>- `male` <br> - `female` <br> - `other` <br> - `unknown` | Practitioner -> Gender                          |
-| email              | String    | \*       |        |          | Email                                                                                         | Practitioner -> Telecom (ContactPoint)          |
-| phone              | String    |          |        |          | Phone                                                                                         | Practitioner -> Telecom (ContactPoint)          |
-| street             | String    |          | \*     |          | Street Address and Number                                                                     | Practitioner -> Address -> line0                |
-| city               | String    |          | \*     |          | City                                                                                          | Practitioner -> Address -> city                 |
-| neighborhood       | String    |          | \*     |          | Locality (Neighbourhood)                                                                      | Practitioner -> Address -> line1                |
-| addressDescription | String    |          | \*     |          | Address Reference (Description)                                                               | Practitioner -> Address -> text                 |
-| specializations    | String [] | \*       | \*     |          | Medical Specialization ID <br> _Acceptable Values:_ IDs obtained by Specialization Endpoint   | Practitioner -> Qualification (Code)            |
-| license            | String    | \*       | \*     | \*       | Medical License ID (Registro Profesional)                                                     | Practitioner -> Qualification Identifier        |
+| Key                | Type      | Required | Public | Readonly | Description                                                                                                                 | FHIR Resource                                   |
+| ------------------ | --------- | -------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| id                 | String    |          | \*     | \*       | Identifier                                                                                                                  |                                                 |
+| photoUrl           | String    |          | \*     |          | Picture                                                                                                                     | Practitioner -> Photo                           |
+| givenName          | String    | \*       | \*     |          | First Name                                                                                                                  | Practitioner -> Name (HumanName -> Family Name) |
+| familyName         | String    | \*       | \*     |          | Last Name                                                                                                                   | Practitioner -> Name (HumanName -> Given Name)  |
+| languages          | String [] | \*       | \*     |          | Languages <br> _Acceptable Format:_ ISO 639-1 <br> [Download JSON file with spanish language names](/data/ISO639-1-es.json) | Practitioner -> Communication (CommonLanguage)  |
+| biography          | String    |          | \*     |          | Biography                                                                                                                   | Practitioner -> Extension                       |
+| birthDate          | String    | \*       |        |          | Date of Birth <br> _Acceptable Format:_ `YYYY-MM-DD`                                                                        | Practitioner -> Bithdate                        |
+| gender             | String    | \*       |        |          | Gender <br> _Acceptable Values:_ <br>- `male` <br> - `female` <br> - `other` <br> - `unknown`                               | Practitioner -> Gender                          |
+| email              | String    | \*       |        |          | Email                                                                                                                       | Practitioner -> Telecom (ContactPoint)          |
+| phone              | String    |          |        |          | Phone                                                                                                                       | Practitioner -> Telecom (ContactPoint)          |
+| street             | String    |          | \*     |          | Street Address and Number                                                                                                   | Practitioner -> Address -> line0                |
+| city               | String    |          | \*     |          | City                                                                                                                        | Practitioner -> Address -> city                 |
+| neighborhood       | String    |          | \*     |          | Locality (Neighbourhood)                                                                                                    | Practitioner -> Address -> line1                |
+| addressDescription | String    |          | \*     |          | Address Reference (Description)                                                                                             | Practitioner -> Address -> text                 |
+| specializations    | String [] | \*       | \*     |          | Medical Specialization ID <br> _Acceptable Values:_ IDs obtained by Specialization Endpoint                                 | Practitioner -> Qualification (Code)            |
+| license            | String    | \*       | \*     | \*       | Medical License ID (Registro Profesional)                                                                                   | Practitioner -> Qualification Identifier        |
 
 ## Endpoints
 
