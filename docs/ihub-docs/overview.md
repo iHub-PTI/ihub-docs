@@ -19,6 +19,12 @@ This article shows you how to invoke the API methods using HTTP requests.
 
 To use the Core REST API, it is important that you understand the basics of [RESTful web services](http://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services) and [JSON representations](http://en.wikipedia.org/wiki/JSON).
 
+All endpoints in this document are relative to this URL:
+
+```
+https://sso-test.pti.org.py/api
+```
+
 ### Request Payloads
 
 **For GET Requests:**  

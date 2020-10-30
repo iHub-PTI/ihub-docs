@@ -21,7 +21,7 @@ Overview of resources provided by the Core REST API.
 | Public Users                     | Endpoint           |
 | -------------------------------- | ------------------ |
 | Read Details of a Doctor         | GET `/doctors/:id` |
-| List (Search and Filter) Doctors | PUT `/doctors`     |
+| List (Search and Filter) Doctors | GET `/doctors`     |
 
 ## Patients
 

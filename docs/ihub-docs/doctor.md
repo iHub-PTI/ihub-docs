@@ -68,7 +68,7 @@ GET /doctors
 Read a Doctor's public details
 
 ```
-[GET] /doctors/:id
+GET /doctors/:id
 ```
 
 **Access Level:** `Public`
