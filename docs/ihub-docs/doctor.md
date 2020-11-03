@@ -40,6 +40,8 @@ The Doctor Resource provides the following endpoints:
 
 - **GET /doctors**
 - **GET /doctors/:id**
+- **Get /profile/doctor**
+- **PUT /profile/doctor**
 
 ---
 
