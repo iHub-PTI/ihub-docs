@@ -16,6 +16,10 @@ This is the iHub Health Ecosystem Documentation.
 
 The project is currently under heavy development but contributors are welcome. For bugs or feature requests or eventual contributions, just open an issue. Contribution guidelines will be available shortly.
 
+## Known Issues
+
+Currently you will have to redeploy this server after changing the docs in any of the other folders.
+
 ## Authors and License
 
 This project was created as part of the iHub COVID-19 project in collaboration between [Penguin Academy](https://penguin.academy) and [PTI (Parque Tecnológico Itaipu Paraguay)](http://pti.org.py).
