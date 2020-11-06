@@ -15,16 +15,14 @@ A Patient is a single, planned meeting in the future or the past. Examples inclu
 
 Overview of Data Model for an Appointment. The Appointment Resource implements the [FHIR Appointment Resource](https://www.hl7.org/fhir/appointment.html).
 
-| Key | Type   | Required | Public | Description           | FHIR ENTITY                                    |
-| --- | ------ | -------- | ------ | --------------------- | ---------------------------------------------- |
-| id  | String |          | \*     | Identifier            |                                                |
-|     | Number | \*       |        | Type of Appointment   | APPOINTMENT -> appointmentType                 |
-|     | Number | \*       | \*     | Length of appointment | APPOINTMENT -> minutesDuration                 |
-|     | Date   | \*       | \*     | Start Date            | APPOINTMENT -> start                           |
-|     | Date   | \*       | \*     | End Date              | APPOINTMENT -> end                             |
-|     | Key    |          |        | Reference to Patient  | APPOINTMENT -> Participant -> Patient          |
-|     | Key    | \*       | \*     | Reference to Doctor   | APPOINTMENT -> Participant -> PractitionerRole |
-|     | String |          |        | Description           | APPOINTMENT -> appointmentType                 |
+| Key         | Type      | Required | Public | Description           | FHIR Resource                                    |
+| ---------   | --------- | -------- | ------ | --------------------- | ---------------------------------------------- |
+| id          | String    |          | \*     | Identifier            |                                                |
+| start       | DateTime  | \*       | \*     | Start Date            | APPOINTMENT -> start                           |
+| end         | Date      | \*       | \*     | End Date              | APPOINTMENT -> end                             |
+| patientId   | String    |          |        | Reference to Patient  | APPOINTMENT -> Participant -> Patient          |
+| doctorId    | String    | \*       | \*     | Reference to Doctor   | APPOINTMENT -> Participant -> PractitionerRole |
+| description | String    |          |        | Description           | APPOINTMENT -> Description                     |
 
 **Notes:**
 
