@@ -35,7 +35,7 @@ Overview of Data Model for an Appointment. The Appointment Resource implements t
 
 The Appointment Resource has the following endpoints available:
 
-- **GET /apointments**
+- **GET /appointments**
 - **GET /profile/doctor/appointments**
 - **POST /profile/doctor/appointments**
 - **GET /profile/patient/appointments**
@@ -48,7 +48,7 @@ The Appointment Resource has the following endpoints available:
 Search for Appointments for some doctors
 
 ```
-GET /apointments?doctors=id1,id2,id3,...
+GET /appointments?doctors=id1,id2,id3,...
 ```
 
 **Access Level:** `Public`

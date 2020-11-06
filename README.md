@@ -18,7 +18,7 @@ The project is currently under heavy development but contributors are welcome. F
 
 ## Known Issues
 
-Currently you will have to redeploy this server after changing the docs in any of the other folders.
+Currently you will have to redeploy this server after changing the docs in any of the other respositories.
 
 ## Authors and License
 
