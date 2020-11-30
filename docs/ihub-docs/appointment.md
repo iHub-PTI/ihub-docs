@@ -15,19 +15,20 @@ A Patient is a single, planned meeting in the future or the past. Examples inclu
 
 Overview of Data Model for an Appointment. The Appointment Resource implements the [FHIR Appointment Resource](https://www.hl7.org/fhir/appointment.html).
 
-| Key         | Type      | Required | Public | Description           | FHIR Resource                                    |
-| ---------   | --------- | -------- | ------ | --------------------- | ---------------------------------------------- |
-| id          | String    |          | \*     | Identifier            |                                                |
-| start       | DateTime  | \*       | \*     | Start Date            | APPOINTMENT -> start                           |
-| end         | Date      | \*       | \*     | End Date              | APPOINTMENT -> end                             |
-| patientId   | String    |          |        | Reference to Patient  | APPOINTMENT -> Participant -> Patient          |
-| doctorId    | String    | \*       | \*     | Reference to Doctor   | APPOINTMENT -> Participant -> PractitionerRole |
-| description | String    |          |        | Description           | APPOINTMENT -> Description                     |
+| Key         | Type     | Required | Public | Description          | FHIR Resource                                  |
+| ----------- | -------- | -------- | ------ | -------------------- | ---------------------------------------------- |
+| id          | String   |          | \*     | Identifier           |                                                |
+| start       | DateTime | \*       | \*     | Start Date           | APPOINTMENT -> start                           |
+| end         | Date     | \*       | \*     | End Date             | APPOINTMENT -> end                             |
+| patientId   | String   |          |        | Reference to Patient | APPOINTMENT -> Participant -> Patient          |
+| doctorId    | String   | \*       | \*     | Reference to Doctor  | APPOINTMENT -> Participant -> PractitionerRole |
+| description | String   |          |        | Description          | APPOINTMENT -> Description                     |
 
 **Notes:**
 
 - Public access will only return future events
 - Appointment queries can be limited by providing start and end date (optionally month for convenience)
+- End Date needs to be after Start Date
 
 ## Endpoints
 
@@ -46,14 +47,16 @@ The Appointment Resource has the following endpoints available:
 Search for Appointments for some doctors
 
 ```
-GET /appointments?doctors=id1,id2,id3,...
+GET /appointments?doctors=id1,id2,id3,...&start=2020-11-30T13:22:26.597Z&end=2020-12-30T13:22:26.597Z
 ```
 
 **Access Level:** `Public`
 
 **Parameters (Query String):**
 
-- doctors: Comma seperated list of doctor IDs
+- doctors: Comma seperated list of doctor IDs, required
+- start: Present or future ISO8601 Date String in the future, required
+- end: ISO8601 Date String, required
 
 **Return Value:** List of Appointments (only public keys)
 
@@ -64,16 +67,18 @@ GET /appointments?doctors=id1,id2,id3,...
 List Appointments of a Doctor
 
 ```
-GET /profile/doctor/appointments
+GET /profile/doctor/appointments?start=2020-11-30T13:22:26.597Z&end=2020-12-30T13:22:26.597Z&include=patient
 ```
 
 **Access Level:** `Authorized`
 
-**Parameters (Query String):** None
+**Parameters (Query String):**
+
+- start: Present or future ISO8601 Date String in the future, required
+- end: ISO8601 Date String, required
+- include: `doctor` and/or `patient` which will include the full public keys of the patient or doctor
 
 **Return Value:** List of Appointments
-
-**Notes:** Ordered by date (newest first)
 
 ---
 
@@ -98,16 +103,18 @@ POST /profile/doctor/appointments
 List Appointments of a Patient
 
 ```
-GET /profile/patient/appointments
+GET /profile/patient/appointments?start=2020-11-30T13:22:26.597Z&end=2020-12-30T13:22:26.597Z&include=doctor
 ```
 
 **Access Level:** `Authorized`
 
-**Parameters (Query String):** None
+**Parameters (Query String):**
+
+- start: Present or future ISO8601 Date String in the future, required
+- end: ISO8601 Date String, required
+- include: `doctor` and/or `patient` which will include the full public keys of the patient or doctor
 
 **Return Value:** List of Appointments
-
-**Notes:** Ordered by date (newest first)
 
 ---
 
