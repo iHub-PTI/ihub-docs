@@ -74,8 +74,8 @@ GET /profile/doctor/appointments?start=2020-11-30T13:22:26.597Z&end=2020-12-30T1
 
 **Parameters (Query String):**
 
-- start: Present or future ISO8601 Date String in the future, required
-- end: ISO8601 Date String, required
+- start: Present or future ISO8601 Date String in the future, optional
+- end: ISO8601 Date String, optional
 - include: `doctor` and/or `patient` which will include the full public keys of the patient or doctor
 
 **Return Value:** List of Appointments
@@ -110,8 +110,8 @@ GET /profile/patient/appointments?start=2020-11-30T13:22:26.597Z&end=2020-12-30T
 
 **Parameters (Query String):**
 
-- start: Present or future ISO8601 Date String in the future, required
-- end: ISO8601 Date String, required
+- start: Present or future ISO8601 Date String in the future, optional
+- end: ISO8601 Date String, optional
 - include: `doctor` and/or `patient` which will include the full public keys of the patient or doctor
 
 **Return Value:** List of Appointments
