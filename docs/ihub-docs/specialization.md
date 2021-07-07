@@ -19,7 +19,7 @@ Overview of Data Model for a Specialization. The Specialization Resource impleme
 
 | Key         | Type   | Required | Public | Readonly | Description                | FHIR Resource                        |
 | ----------- | ------ | -------- | ------ | -------- | -------------------------- | ------------------------------------ |
-| id          | String | \*       | \*     |          | Medical Specialization ID  | Practitioner -> Qualification (Code) |
+| id          | String | \*       | \*     | \*       | Medical Specialization ID  | Practitioner -> Qualification (Code) |
 | description | String | \*       | \*     | \*       | Name of the Specialization |                                      |
 
 ## Endpoints
